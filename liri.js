@@ -1,3 +1,7 @@
+var movie = require("./api/movie.js");
+var spotify = require("./api/spotify.js");
+var twitter = require("./api/twitter.js");
+
 var command = process.argv[2]
 console.log(command)
 
@@ -5,13 +9,13 @@ switch(command) {
   case "music":
   case "spotify":
   case "spotify-this-song":
-    result = console.log("spotify music")
+    result = spotify();
     break;
 
   case "twitter":
   case "twits":
   case "my-tweets":
-    result = console.log("twitter stuff")
+    result = twitter();
     break;
 
   case "do-what-it-says":
@@ -21,9 +25,9 @@ switch(command) {
 
   case "movie":
   case "movie-this":
-    result = console.log("movie stuff")
+    result = movie();
     break;
-    
+
     default:
     result = console.log("please try another search");
   }
