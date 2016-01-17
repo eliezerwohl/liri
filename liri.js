@@ -6,7 +6,7 @@ var searchItem = []
 for (var i = 3; i < process.argv.length; i++) {
   searchItem += " " + process.argv[i]};
 
-console.log(searchItem)
+// console.log(searchItem)
 
 switch(command) {
   case "music":
