@@ -1,24 +1,24 @@
 var movie = require("./api/movie.js");
 var spotify = require("./api/spotify.js");
 var twitter = require("./api/twitter.js");
+var command = process.argv[2]
+var searchItem = []
+for (var i = 3; i < process.argv.length; i++) {
+  searchItem += " " + process.argv[i]};
 
-var command = []
-for (var i = 2; i < process.argv.length; i++) {
-  multipleThings += " " + process.argv[i]};
-
-console.log(multipleThings)
+console.log(searchItem)
 
 switch(command) {
   case "music":
   case "spotify":
   case "spotify-this-song":
-    result = spotify();
+    result = spotify(searchItem);
     break;
 
   case "twitter":
   case "twits":
   case "my-tweets":
-    result = twitter();
+    result = twitter(searchItem);
     break;
 
   case "do-what-it-says":
@@ -28,7 +28,7 @@ switch(command) {
 
   case "movie":
   case "movie-this":
-    result = movie();
+    result = movie(searchItem);
     break;
 
     default:
