@@ -1,7 +1,4 @@
 var secretKeys = require("../keys.js");
-console.log (secretKeys.twitterKeys.consumer_secret);
-
-
 module.exports = function twitter(){
 var Twitter = require('twitter');
  var client = new Twitter({
