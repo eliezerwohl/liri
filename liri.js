@@ -2,8 +2,11 @@ var movie = require("./api/movie.js");
 var spotify = require("./api/spotify.js");
 var twitter = require("./api/twitter.js");
 
-var command = process.argv[2]
-console.log(command)
+var command = []
+for (var i = 2; i < process.argv.length; i++) {
+  multipleThings += " " + process.argv[i]};
+
+console.log(multipleThings)
 
 switch(command) {
   case "music":
