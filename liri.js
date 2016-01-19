@@ -28,6 +28,9 @@ switch(command) {
 
   case "movie":
   case "movie-this":
+    if (searchItem == ""){
+      searchItem = "Mr. Nobody";
+    }
     result = movie(searchItem);
     break;
 
