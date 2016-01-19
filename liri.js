@@ -12,6 +12,9 @@ switch(command) {
   case "music":
   case "spotify":
   case "spotify-this-song":
+  if (searchItem == ""){
+      searchItem = "what’s my age again";
+    }
     result = spotify(searchItem);
     break;
 
